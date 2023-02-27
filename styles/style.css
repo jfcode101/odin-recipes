@@ -108,15 +108,15 @@ body {
   color: var(--peru-clr);
   font: normal 600 1.15rem var(--main-font);
   /* text-decoration: underline; */
-  text-decoration: underline .25rem var(--green-clr);
-  text-underline-offset: .5rem;
+  text-decoration: underline 0.25rem var(--green-clr);
+  text-underline-offset: 0.5rem;
 }
 
 .content-msg p a {
   color: var(--peru-clr);
   font-style: italic;
   text-shadow: 0 0 2px var;
-  transition: .5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .content-msg p a:hover {
@@ -163,4 +163,112 @@ body {
 .footer p a {
   color: var(--peru-clr);
   font-weight: 700;
+}
+
+/* --------------------- media --------------------- */
+@media (max-width: 459px) {
+  .wrapper {
+    width: 95vw;
+    height: auto !important;
+    margin: auto;
+  }
+  .container {
+    width: 100%;
+  }
+
+  .content-head {
+    font: normal 700 1.25rem var(--main-font);
+    text-align: center;
+  }
+
+  .content-msg p {
+    color: var(--green-clr);
+    font: normal 700 1rem var(--main-font);
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .list-item span,
+  .list-item a {
+    font-size: 1rem;
+  }
+
+  .footer p {
+    font: normal 400 1rem var(--main-font);
+  }
+
+  .footer p a {
+    color: var(--peru-clr);
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 460px) and (max-width: 600px) {
+  .wrapper {
+    width: 95vw;
+    height: auto !important;
+    margin: auto;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .content-head {
+    font: normal 700 1.5rem var(--main-font);
+    text-align: center;
+  }
+
+  .content-msg p {
+    color: var(--green-clr);
+    font: normal 700 1rem var(--main-font);
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .list-item span,
+  .list-item a {
+    font-size: 1rem;
+  }
+
+  .footer p {
+    font: normal 400 1rem var(--main-font);
+  }
+
+  .footer p a {
+    color: var(--peru-clr);
+    font-weight: 500;
+  }
+}
+
+@media (max-width: 760px) {
+  .wrapper {
+    width: 95vw;
+    height: auto !important;
+    margin: auto;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .content-head {
+    font: normal 700 1.75rem var(--main-font);
+  }
+
+  .content-msg p {
+    color: var(--green-clr);
+    font: normal 700 1.25rem var(--main-font);
+    text-decoration: none;
+    text-align: center;
+  }
+
+  .list-item span,
+  .list-item a {
+    font-size: 1.15rem;
+  }
+
+  .footer p {
+    font: normal 400 1rem var(--main-font);
+  }
 }
