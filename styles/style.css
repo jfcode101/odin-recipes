@@ -1,0 +1,119 @@
+/* Google Fonts: Montserrat + Montserrat Alternates */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@400;500;600&family=Montserrat:wght@400;500;700;800;900&display=swap");
+
+/* variables */
+:root {
+  /* font families */
+  --main-font: "Montserrat", sans-serif;
+  --second-font: "Montserrat Alternates", sans-serif;
+
+  /* colors */
+  --green-clr: #90b274;
+  --dark-olive-green-clr: #262416;
+  --peru-clr: #cb842d;
+  --tomato-red-clr: #f64900;
+  --white-smoke-clr: #eae8e8;
+  --white-clr: #fff;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+
+html {
+  font-size: 100%;
+  letter-spacing: 1px;
+}
+
+body {
+  font-family: var(--main-font);
+}
+
+/* -------------------------------- wrapper -------------------------------- */
+.wrapper {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: 90vh 10vh;
+}
+
+/* -------------------------------- common classes -------------------------------- */
+/* flex */
+.flex {
+  display: flex;
+}
+
+/* align-items: center; justify-content: center */
+.flex-all-center {
+  align-items: center;
+  justify-content: center;
+}
+
+/* flex-flow: column */
+.flex-col {
+  flex-flow: column;
+}
+
+/* list-item class: item box */
+.item-box {
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+}
+
+/* --------------------- container --------------------- */
+.container {
+  gap: 1rem;
+}
+
+/* content header */
+.content-head {
+  background-color: var(--peru-clr);
+  color: var(--white-clr);
+  font: normal 700 2.5rem var(--main-font);
+  border-radius: 5px;
+  box-shadow: 0 2px 6px -1px var(--peru-clr);
+}
+
+/* content head head-1 */
+.content-head .head-1 {
+  padding: 1rem 2rem;
+
+  text-shadow: 0 2px 2px var(--dark-olive-green-clr);
+}
+
+/* list */
+
+/* list item */
+.list-item {
+  margin-bottom: 0.5rem;
+  background-color: var(--peru-clr);
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  transition: all 0.5s ease-in-out;
+}
+
+.list-item span,
+.list-item a {
+  color: var(--white-clr);
+  font-size: 1.35rem;
+  font-weight: 500;
+}
+
+.list-item:hover {
+  background-color: var(--tomato-red-clr);
+  box-shadow: 0 2px 6px -1px var(--dark-olive-green-clr);
+}
+
+/* --------------------- footer --------------------- */
+.footer {
+  gap: 0.5rem;
+  background-color: var(--dark-olive-green-clr);
+  color: var(--white-clr);
+  line-height: 1.4;
+}
