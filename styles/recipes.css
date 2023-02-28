@@ -10,7 +10,6 @@
 
 /* --------------------- recipe container --------------------- */
 .recipe-container {
-  /* background-color: yellow; */
   width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -97,7 +96,6 @@
 .intro-img {
   width: 600px;
   height: 300px;
-  /* background-color: red; */
 }
 
 .intro-img img {
@@ -146,8 +144,10 @@
   text-underline-offset: 0.5rem;
 }
 
-/* description text */
-.desc-text {
+/* description text, ingredients list, steps-list*/
+.desc-text,
+.ingredients-list,
+.steps-list {
   width: 80%;
   margin: auto;
 }
@@ -169,16 +169,15 @@
 }
 
 /* ingredients list */
-.ingredients-list {
-  width: 80%;
-  margin: auto;
-}
-
 .ingredients-list li {
   margin-bottom: 0.5rem;
   align-items: center;
   font-size: 1rem;
   font-weight: 400;
+}
+
+.ingredients-list li span {
+  align-self: flex-start;
 }
 
 .ingredients-list li:last-child {
@@ -200,11 +199,6 @@
   border-radius: 5px;
   color: var(--dark-olive-green-clr);
   background-color: var(--white-smoke-clr);
-}
-
-.steps-list {
-  width: 80%;
-  margin: auto;
 }
 
 .steps-list li {
@@ -246,4 +240,81 @@
 .footer {
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
+}
+
+/* --------------------- media query --------------------- */
+@media (max-width: 760px) {
+  .recipe-wrapper {
+    width: 99vw;
+    margin: auto;
+  }
+
+  .recipe-container {
+    width: 100%;
+  }
+
+  .nav {
+    width: 100%;
+    justify-content: space-evenly;
+    padding: 0;
+  }
+
+  .nav a {
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .nav-logo a {
+    font-size: 1rem;
+  }
+
+  .intro-header h1 {
+    font: normal 700 1.75rem var(--second-font);
+  }
+
+  .intro-img {
+    width: 90vw;
+    height: auto;
+  }
+
+  .description,
+  .ingredients,
+  .steps,
+  .caution {
+    width: 90%;
+    margin: auto;
+  }
+
+  .desc-intro h2 {
+    font: normal 700 1.35rem var(--second-font);
+  }
+
+  .desc-text,
+  .ingredients-list,
+  .steps-list {
+    width: 90%;
+    margin: auto;
+  }
+
+  .ingredients-list li {
+    align-items: flex-start;
+    margin-bottom: 1rem;
+  }
+
+  .steps-list li {
+    font: normal 600 1.15rem/1.6 var(--second-font);
+    margin-bottom: 1rem;
+  }
+
+  .steps-list li span {
+    font: normal 400 1rem var(--main-font);
+  }
+
+  .caution {
+   flex-flow: column;
+  }
+
+  .caution-text {
+    font: normal 400 1rem/1.6 var(--main-font);
+  }
 }
